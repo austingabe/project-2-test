@@ -6,8 +6,8 @@
 
     <div class="form-group">
         <label for="type">Fuel Type</label><br>
-        <input type="radio" name="fueltype" value="unleaded" required> Unleaded <br>
-        <input type="radio" name="fueltype" value="diesel"> Diesel
+        <input type="radio" name="fueltype" value="Unleaded" required> Unleaded <br>
+        <input type="radio" name="fueltype" value="Diesel"> Diesel
     </div><br>
 
     <div class="form-group">
@@ -25,7 +25,10 @@
     </div><br>
 
     <button id="send" type="button">Submit</button>
-</form>
+</form><br>
 
+<form action="view-data" method="get" id="viewBtn" class="viewBtn">
+    <button type="button" class="btn btn-primary">VIEW FUEL DATA</button>
+</form><br>
 
 {{> footer }}

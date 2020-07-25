@@ -1,6 +1,4 @@
 const db = require("./models");
-const express = require("express");
-// const app = express.Router();
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
@@ -11,6 +9,7 @@ module.exports = function (app) {
         // console.log(req.user);
         // if (req.user) {
         db.Fuel.findAll({
+            // Sorted by descending order to get newest entry at the top
             order: [
                 ["id", "DESC"]
             ]
@@ -28,15 +27,6 @@ module.exports = function (app) {
             layout: "main-submit"
         });
     })
-
-    // app.post("/submit-data", function(req, res) {
-    //     db.Fuel.create({
-    //         fuel: req.body.fueltype,
-    //         vehicle: req.body.vehicletype,
-    //         gallons: req.body.gallons
-    //     });
-    //     res.render("view-data");
-    // });
 
     app.post("/submit-data", function (req, res) {
         db.Fuel.create(req.body).then(function (results) {

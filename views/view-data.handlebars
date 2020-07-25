@@ -1,6 +1,10 @@
 {{> nav }}
 
-<h1>View Fuel Data</h1>
+<h1>View Fuel Data</h1><br>
+
+<form action="submit-data" method="get" id="addBtn" class="addBtn">
+    <button type="button" class="btn btn-primary">Submit Another Entry</button>
+</form><br>
 
 <div class="container">
     {{!-- <div class="row">
@@ -58,7 +62,8 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div><br>
+
 </div>
 
 {{> footer }}

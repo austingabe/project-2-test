@@ -22,8 +22,6 @@ app.use(bodyParser.json());
 // Support URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use(express.static(path.join(__dirname, "public")));
-
 // View engine setup
 app.set("view engine", "handlebars");
 
@@ -64,6 +62,6 @@ app.use(function(err, req, res, next) {
 
 db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
-        console.log(`==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.`, PORT);
+        console.log(`==> 🌎 Listening on port . Visit http://localhost:%s/ in your browser.`, PORT);
     });
 });

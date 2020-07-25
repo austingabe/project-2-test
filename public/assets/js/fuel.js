@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $("#viewBtn").on("click", function (event) {
+    $(".viewBtn").on("click", function (event) {
         event.preventDefault();
         const url = "/view-data";
         window.location.replace(url);
     })
 
-    $("#addBtn").on("click", function (event) {
+    $(".addBtn").on("click", function (event) {
         event.preventDefault();
         const url = "/submit-data";
         window.location.replace(url);
@@ -32,16 +32,5 @@ $(document).ready(function () {
                 window.location.replace(url);
             }
         );
-
-        // const entry = {
-        //     fuel = fueltype
-        //     vehicle =
-        //     gallons
-        // }
-        // $.ajax({
-        //     type: "POST",
-        //     url: "/submit-data",
-
-        // }).then(function(data))
     })
 });
