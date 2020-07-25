@@ -51,12 +51,12 @@ module.exports = function(sequelize, Sequelize) {
         return bcrypt.compareSync(password, this.password);
     }
 
-    User.associate = function(models) {
-        // Associating User with Fuel
-        User.hasMany(models.Fuel, {
-            onDelete: "cascade"
-        });
-    };
+    // User.associate = function(models) {
+    //     // Associating User with Fuel
+    //     User.hasMany(models.Fuel, {
+    //         onDelete: "cascade"
+    //     });
+    // };
 
     return User;
 }

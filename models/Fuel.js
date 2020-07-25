@@ -2,6 +2,12 @@
 
 module.exports = function(sequelize, Sequelize) {
     const Fuel = sequelize.define("Fuel", {
+        id: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: Sequelize.INTEGER
+        },
+        
         submit_time: {
             type: "TIMESTAMP",
             defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
@@ -30,13 +36,13 @@ module.exports = function(sequelize, Sequelize) {
         },
     });
 
-    Fuel.associate = function(models) {
-        Fuel.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    }
+    // Fuel.associate = function(models) {
+    //     Fuel.belongsTo(models.User, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // }
 
     return Fuel;
 }
